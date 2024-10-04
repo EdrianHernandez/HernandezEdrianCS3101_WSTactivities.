@@ -1,47 +1,231 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edrian's Vision Board</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300;400;600&display=swap');
 
-<div class="vision-board">
-    <div class="image-grid">
-        <div class="column">
-            <div><img src="assets/broom.jpg" alt="Broom Image"></div>
-            <div><img src="assets/tulips.jpg" alt="Broom Image"></div>
-        </div>
-        <div class="large-box">
-            <h3>Sip, Smile, Conquer the Day!</h3>
-        </div>
-        <div class="rectangle">
-            <img src="assets/kupi.jpg" alt="Placeholder Image">
-        </div>
-    </div>
-   
-    <div class="content-grid">
-        <div class="rectangle">
-            <img src="assets/porsche.jpg" alt="Placeholder Image">
-        </div>
-        <div class="goals">
-            <h3>Goals</h3>
-            <ul>
-                <li>Travel</li>
-                <li>Exercise Regularly</li>
-                <li>Practice Gratitude</li>
-                <li>Learn About Investing</li>
-                <li>Improve Time Management</li>
-            </ul>
-        </div>
-        <div class="large-image">
-            <img src="assets/dog.jpg" alt="Placeholder Image">
-        </div>
-    </div>
-</div>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #674636, #F7EED3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-</body>
-</html>
+.vision-board {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    max-width: 1200px;
+    background: #fff8e841;
+}
+
+.image-grid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.image-grid .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-grid .column img {
+    width: 100%;
+    height: 123px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid .column img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-grid .large-box {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7EED3;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #674636;
+    height: 240px;
+    width: 340px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid .large-box:hover {
+    background-color: #674636;
+    color: #F7EED3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-grid .rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 260px;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid .rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-grid img, .rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.content-grid .rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 260px;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-grid .rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.goals {
+    flex: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    background-color: #674636;
+    color: #F7EED3;
+    height: 240px;
+    width: 230px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goals h3 {
+    text-align: center; 
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 0;
+    font-size: 24px; 
+    font-weight: 700; 
+    font-family: 'Raleway', sans-serif;
+}
+
+.goals:hover {
+    background-color: #F7EED3;
+    color: #674636;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.goals ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.goals li:before {
+    content: "✔";
+    margin-right: 10px;
+    color: #F7EED3;
+}
+
+.large-image {
+    flex: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    width: 235px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.large-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .vision-board {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .vision-board {
+        width: 80%;
+    }
+
+    .image-grid, .content-grid {
+        flex-direction: column;
+    }
+
+    .image-grid .large-box, .image-grid .rectangle, .content-grid .rectangle, .goals, .large-image {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-board {
+        width: 90%;
+    }
+
+    .image-grid .large-box, .image-grid .rectangle, .content-grid .rectangle, .goals, .large-image {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid .column img, .image-grid .large-box, .image-grid .rectangle, .content-grid .rectangle, .goals, .large-image {
+        height: auto;
+    }
+
+    .image-grid .large-box {
+        font-size: 24px;
+    }
+}
