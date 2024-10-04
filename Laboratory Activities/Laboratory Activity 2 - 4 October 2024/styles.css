@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edrian's Vision Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="vision-board">
+    <div class="image-grid">
+        <div class="column">
+            <div><img src="assets/broom.jpg" alt="Broom Image"></div>
+            <div><img src="assets/tulips.jpg" alt="Broom Image"></div>
+        </div>
+        <div class="large-box">
+            <h3>Sip, Smile, Conquer the Day!</h3>
+        </div>
+        <div class="rectangle">
+            <img src="assets/kupi.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+   
+    <div class="content-grid">
+        <div class="rectangle">
+            <img src="assets/porsche.jpg" alt="Placeholder Image">
+        </div>
+        <div class="goals">
+            <h3>Goals</h3>
+            <ul>
+                <li>Travel</li>
+                <li>Exercise Regularly</li>
+                <li>Practice Gratitude</li>
+                <li>Learn About Investing</li>
+                <li>Improve Time Management</li>
+            </ul>
+        </div>
+        <div class="large-image">
+            <img src="assets/dog.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
