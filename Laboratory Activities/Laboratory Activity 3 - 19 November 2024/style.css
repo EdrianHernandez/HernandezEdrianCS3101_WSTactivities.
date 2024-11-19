@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(0, 212, 255, 1) 100%);
+    background-size: 200% 200%;
+    animation: gradientBackground 12s ease infinite;
+  }
+  
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Glassmorphism container */
+  .container {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  h2 {
+    font-size: 2.5rem; 
+    color: #fff134;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px; 
+    position: relative; 
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 400px;
+    height: 3px;
+    background: #f51f1f;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    opacity: 0.8;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #333;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  textarea:focus {
+    border-color: #595a5a93;
+    box-shadow: 0 4px 10px #ffffff60;
+  }
+  
+
+.count-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%; 
+    max-width: 600px;
+    margin: 20px 0; 
+  }
+  
+  #wordcount,
+  #sentenceCount {
+    font-size: 1.2rem;
+    color: #333;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
