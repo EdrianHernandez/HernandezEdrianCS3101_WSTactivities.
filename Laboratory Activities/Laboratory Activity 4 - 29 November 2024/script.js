@@ -4,7 +4,7 @@ const navSlide = () => {
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
+        nav.classList.toggle('active');
 
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
@@ -14,7 +14,7 @@ const navSlide = () => {
             }
         });
 
-        burger.classList.toggle('toggle');
+        burger.classList.toggle('active');
     });
 }
 
@@ -142,15 +142,15 @@ navLinks.forEach(link => {
             behavior: 'smooth'
         });
 
-        if (nav.classList.contains('nav-active')) {
-            nav.classList.remove('nav-active');
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
             burger.classList.remove('active');
         }
     });
 });
 
 burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
+    nav.classList.toggle('active');
     burger.classList.toggle('active');
 
     navLinks.forEach((link, index) => {
@@ -163,10 +163,10 @@ burger.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-    if (nav.classList.contains('nav-active') && 
+    if (nav.classList.contains('active') && 
         !nav.contains(e.target) && 
         !burger.contains(e.target)) {
-        nav.classList.remove('nav-active');
+        nav.classList.remove('active');
         burger.classList.remove('active');
     }
 });
